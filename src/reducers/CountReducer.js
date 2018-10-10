@@ -8,10 +8,8 @@ export default function CountReducer(
         case 'link': 
          if (suppliersArr.indexOf(state.wish_value)  !== -1){
              linked = true;
-             alert(linked);
          } else {
              linked = false;
-             alert(linked);
          }
         return {
         count: Number(linked)
@@ -23,7 +21,6 @@ export default function CountReducer(
                 wish_value:wish_value      
             }
         case 'increase':
-        alert(state.wish_value)
             return {
                 count: Number(count) + 1,
                 wish_value:state.wish_value
