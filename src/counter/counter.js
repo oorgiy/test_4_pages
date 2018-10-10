@@ -4,18 +4,17 @@ import CountReducer from '../reducers/CountReducer'
 import { Link } from 'react-router-dom';
 export default class Counter extends Component {
     
-        
-        
-          
-        
-          
-        
+    constructor(props) {
+        super(props);
+        this.check = this.check.bind(this);
+      }  
+    check(event)
+    { 
+        this.props.onUpdateClick(event.target.value);
+        this.props.onLink(event.target.value);
+    }
     render() {
-        function check()
-        {
-            onUpdateClick();
-            onLink();
-        }
+        
         const {count, wish_value, onIncreaseClick,onLink,onUpdateClick} = this.props
         if (count === 1){
         return(
@@ -27,7 +26,7 @@ export default class Counter extends Component {
                     <button onClick={onLink}>
                         <Link  to="/search">Поиск</Link> 
                     </button>
-                    <input value={wish_value} type="text" onChange={"onUpdateClick()"} onClick={onIncreaseClick}/>
+                    <input value={wish_value} type="text" onChange={onUpdateClick} onClick={onLink}/>
                 </div>
                 
             </div>
@@ -40,7 +39,7 @@ export default class Counter extends Component {
                     <button onClick={onLink}>
                         <Link to="/" onClick={alert("неверное имя п")}>Поиск</Link>
                     </button>
-                    <input value={wish_value} type="text" onChange={"onUpdateClick()"} onClick={onIncreaseClick}/>
+                    <input value={wish_value} type="text" onChange={onUpdateClick} onClick={onLink}/>
                 </div>
                 
             </div>)

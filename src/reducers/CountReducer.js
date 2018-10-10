@@ -10,6 +10,7 @@ export default function CountReducer(
              linked = true;
          } else {
              linked = false;
+             
          }
         return {
         count: Number(linked)

@@ -6,7 +6,7 @@ const reducer = combineReducers({
 });
 
 const initialState = {
-    CountReducer: {count: 123, wish_value: 12}
+    CountReducer: {count: 0, wish_value: ""}
 };
 
 let store = createStore(reducer, initialState);

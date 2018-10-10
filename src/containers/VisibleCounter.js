@@ -15,6 +15,7 @@ function mapDispatchToProps(dispatch) {
         onLink: () => dispatch(actions.linkTodo()),
         onUpdateClick: event => dispatch((
             actions.updateTodo(event.target.value)
+            
         ))
     }
 }
