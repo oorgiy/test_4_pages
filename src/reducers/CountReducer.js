@@ -1,0 +1,34 @@
+import suppliersArr from '../App.js'
+export default function CountReducer(
+    state = {count: 0,    wish_value: 0,}, action) {
+    const count = state.count    
+    const wish_value = action.wish_value 
+    var linked = false;   
+    switch (action.type) {
+        case 'link': 
+         if (suppliersArr.indexOf(state.wish_value)  !== -1){
+             linked = true;
+             alert(linked);
+         } else {
+             linked = false;
+             alert(linked);
+         }
+        return {
+        count: Number(linked)
+    };
+        
+        case 'update':
+            return {
+                count: wish_value,
+                wish_value:wish_value      
+            }
+        case 'increase':
+        alert(state.wish_value)
+            return {
+                count: Number(count) + 1,
+                wish_value:state.wish_value
+            }
+        default:
+            return state
+    }
+}
