@@ -3,9 +3,10 @@ export const increaseTodo = () => {
         type: 'increase'
     }
 }
-export const linkTodo = () => {
+export const linkTodo = (wish_value) => {
     return {
-        type: 'link'
+        type: 'link',
+        wish_value: wish_value
     }
 }
 export const updateTodo = (wish_value) => {
