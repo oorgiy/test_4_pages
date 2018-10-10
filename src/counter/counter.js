@@ -37,7 +37,7 @@ export default class Counter extends Component {
                     <button  onClick={onIncreaseClick}>Increase</button>
                     <button onClick={onLink}>Поиск</button>
                     <button onClick={onLink}>
-                        <Link to="/" onClick={alert("неверное имя п")}>Поиск</Link>
+                        <Link to="/" onClick={() => alert("неверное имя п")}>Поиск</Link>
                     </button>
                     <input value={wish_value} type="text" onChange={onUpdateClick} onClick={onLink}/>
                 </div>
