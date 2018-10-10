@@ -1,4 +1,4 @@
-import suppliersArr from '../App.js'
+const suppliersArr = ["Google","Apple","Rosneft","apple","google","rosneft","роснефть","Роснефть"];
 export default function CountReducer(
     state = {count: 0,    wish_value: 0,}, action) {
     const count = state.count    

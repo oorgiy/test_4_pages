@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 import VisibleCounter from './containers/VisibleCounter'
-export const suppliersArr = ["Google","Apple","Rosneft","apple","google","rosneft","роснефть","Роснефть"];
+
 
 class App extends Component {
     
