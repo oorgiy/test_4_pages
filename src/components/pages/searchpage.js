@@ -5,7 +5,7 @@ import VisibleCounter from 'C:/projects/react/test/src/containers/VisibleCounter
 import Counter from 'C:/projects/react/test/src/counter/counter';
 import CountReducer from 'C:/projects/react/test/src/reducers/CountReducer'
 const scores = [88,19,46,23,16,22,75,43,81,28];
-let scoreIs = true;
+let scoreIs = false;
 class  searchpage extends Component {
   constructor(props) {
     super(props);
@@ -27,11 +27,11 @@ class  searchpage extends Component {
   }
 checkScore(number){
   alert(scoreIs)
-      if (scores.indexOf(number)  !== -1){
+      if (scores.indexOf(Number(number))  !== -1){
         scoreIs  = true;
     } else 
         scoreIs = false;  
-    
+    /*почему-то надо нажимать два раза чтобы выдало тру (он алертит перед тем как присвоить) */
 }
 render() {
   const {count, wish_value, onIncreaseClick,onLink,onUpdateClick} = this.props
