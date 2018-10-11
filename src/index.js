@@ -7,22 +7,20 @@ import {
     Route,
     BrowserRouter,
   } from 'react-router-dom';
-  import offpage from './components/pages/page3';
-  import searchpage from './components/pages/page2';
+  import offpage from './components/pages/offpage';
+  import searchpageC from './components/pages/searchpage';
 
 ReactDOM.render(
     <Provider store={store}>
         <BrowserRouter>
         <div>
-            
             <div >
             <div >
             </div>
             <div >
               <Route exact strict path="/" component={App} />
               <Route path="/off" component={offpage} />
-              <Route path="/search" component={searchpage} />
-
+              <Route path="/search" component={searchpageC} />
             </div>
           </div>
           </div>

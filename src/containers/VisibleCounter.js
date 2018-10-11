@@ -1,7 +1,7 @@
 import {connect} from 'react-redux';
 import Counter from '../counter/counter';
 import * as actions from '../actions'
-
+import searchpage from '../components/pages/searchpage'
 function mapStateToProps(state) {
     return {
         count: state.CountReducer.count,
@@ -15,7 +15,6 @@ function mapDispatchToProps(dispatch) {
         onLink: () => dispatch(actions.linkTodo()),
         onUpdateClick: event => dispatch((
             actions.updateTodo(event.target.value)
-            
         ))
     }
 }

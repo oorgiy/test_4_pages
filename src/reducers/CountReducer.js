@@ -2,7 +2,7 @@ const suppliersArr = ["Google","Apple","Rosneft","apple","google","rosneft","Ñ€Ð
 export default function CountReducer(
     state = {count: 0,    wish_value: 0,}, action) {
     const count = state.count    
-    const wish_value = action.wish_value 
+    const wish_value = action.wish_value
     var linked = false;   
     switch (action.type) {
         case 'link': 
@@ -13,7 +13,8 @@ export default function CountReducer(
              
          }
         return {
-        count: Number(linked)
+        count: Number(linked),
+        wish_value:state.wish_value
     };
         
         case 'update':
