@@ -10,7 +10,7 @@ export default class Counter extends Component {
       }  
     check(event)
     { 
-        this.props.onUpdateClick(event.target.value);
+        this.props.onUpdateClick(event);
         this.props.onLink(event.target.value);
     }
     render() {
@@ -23,10 +23,10 @@ export default class Counter extends Component {
                     <span>{count}</span>
                     <button  onClick={onIncreaseClick}>Increase</button>
                     <button onClick={onLink}>Поиск</button>
-                    <button onClick={onLink}>
+                    <button>
                         <Link  to="/search">Поиск</Link> 
                     </button>
-                    <input value={wish_value} type="text" onChange={onUpdateClick} onClick={onLink}/>
+                    <input value={wish_value} type="text" onChange={this.check} onClick={onLink}/>
                 </div>
                 
             </div>
@@ -36,10 +36,10 @@ export default class Counter extends Component {
                     <span>{count}</span>
                     <button  onClick={onIncreaseClick}>Increase</button>
                     <button onClick={onLink}>Поиск</button>
-                    <button onClick={onLink}>
+                    <button>
                         <Link to="/" onClick={() => alert("неверное имя п")}>Поиск</Link>
                     </button>
-                    <input value={wish_value} type="text" onChange={onUpdateClick} onClick={onLink}/>
+                    <input value={wish_value} type="text" onChange={this.check} onClick={onLink}/>
                 </div>
                 
             </div>)
